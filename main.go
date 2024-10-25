@@ -14,6 +14,11 @@ func main() {
 		return
 	}
 
+	if len(os.Args) > 3 {
+		fmt.Println("Usage: go run . [STRING] [BANNER] || Example: go run . \"test\" standard")
+		return
+	}
+
 	// The input text to be rendered in ASCII art
 	argStr := os.Args[1]
 	var styleBanner string
